@@ -1,44 +1,39 @@
 package info.instagram.instagram.entities;
 
-import android.media.Image;
+import java.util.Date;
+import java.util.List;
 
 /**
- * Created by Naser on 10/24/2017.
+ * Created by Naser on 10/28/2017.
  */
 
 public class Post {
 
     private long id;
-    private long userId;
-    private String profileName;
-    private int profileImage;
-    private int postImage;
-    private String postText;
-    private int likeCount;
-    private int commentCount;
-    private boolean isLiked;
-    private boolean isCommented;
-    private boolean isShared;
+    private String title;
+    private String slug;
+    private String excerpt;
+    private String content;
+    private String pubDate;
+    private String lastModified;
+    private Boolean isPublished;
+    private List<String> categories;
+    private List<Comment> comments;
 
     public Post() {
     }
 
-    public Post(long id, long userId, String profileName,
-                int profileImage, int postImage,
-                String postText, int likeCount,
-                int commentCount, boolean isLiked,
-                boolean isCommented, boolean isShared) {
+    public Post(long id, String title, String slug, String excerpt, String content, String pubDate, String lastModified, Boolean isPublished, List<String> categories, List<Comment> comments) {
         this.id = id;
-        this.userId = userId;
-        this.profileName = profileName;
-        this.profileImage = profileImage;
-        this.postImage = postImage;
-        this.postText = postText;
-        this.likeCount = likeCount;
-        this.commentCount = commentCount;
-        this.isLiked = isLiked;
-        this.isCommented = isCommented;
-        this.isShared = isShared;
+        this.title = title;
+        this.slug = slug;
+        this.excerpt = excerpt;
+        this.content = content;
+        this.pubDate = pubDate;
+        this.lastModified = lastModified;
+        this.isPublished = isPublished;
+        this.categories = categories;
+        this.comments = comments;
     }
 
     public long getId() {
@@ -49,85 +44,81 @@ public class Post {
         this.id = id;
     }
 
-    public long getUserId() {
-        return userId;
+    public String getTitle() {
+        return title;
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getProfileName() {
-        return profileName;
+    public String getSlug() {
+        return slug;
     }
 
-    public void setProfileName(String profileName) {
-        this.profileName = profileName;
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
-    public int getProfileImage() {
-        return profileImage;
+    public String getExcerpt() {
+        return excerpt;
     }
 
-    public void setProfileImage(int profileImage) {
-        this.profileImage = profileImage;
+    public void setExcerpt(String excerpt) {
+        this.excerpt = excerpt;
     }
 
-    public int getPostImage() {
-        return postImage;
+    public String getContent() {
+        return content;
     }
 
-    public void setPostImage(int postImage) {
-        this.postImage = postImage;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getPostText() {
-        return postText;
+    public String getPubDate() {
+        return pubDate;
     }
 
-    public void setPostText(String postText) {
-        this.postText = postText;
+    public void setPubDate(String pubDate) {
+        this.pubDate = pubDate;
     }
 
-    public int getLikeCount() {
-        return likeCount;
+    public String getLastModified() {
+        return lastModified;
     }
 
-    public void setLikeCount(int likeCount) {
-        this.likeCount = likeCount;
+    public void setLastModified(String lastModified) {
+        this.lastModified = lastModified;
     }
 
-    public int getCommentCount() {
-        return commentCount;
+    public Boolean getPublished() {
+        return isPublished;
     }
 
-    public void setCommentCount(int commentCount) {
-        this.commentCount = commentCount;
+    public void setPublished(Boolean published) {
+        isPublished = published;
     }
 
-    public boolean isLiked() {
-        return isLiked;
+    public List<String> getCategories() {
+        return categories;
     }
 
-    public void setLiked(boolean liked) {
-        isLiked = liked;
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
     }
 
-    public boolean isCommented() {
-        return isCommented;
+    public List<Comment> getComments() {
+        return comments;
     }
 
-    public void setCommented(boolean commented) {
-        isCommented = commented;
-    }
-
-    public boolean isShared() {
-        return isShared;
-    }
-
-    public void setShared(boolean shared) {
-        isShared = shared;
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
 
 }
+
+
+
+

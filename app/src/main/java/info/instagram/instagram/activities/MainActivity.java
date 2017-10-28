@@ -1,24 +1,17 @@
 package info.instagram.instagram.activities;
 
 import android.os.Handler;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
-
 import info.instagram.instagram.R;
-import info.instagram.instagram.adapters.MainAdapter;
-import info.instagram.instagram.entities.Post;
 import info.instagram.instagram.fragments.Explorer;
 import info.instagram.instagram.fragments.MainPage;
+import info.instagram.instagram.fragments.PostFragment;
 import info.instagram.instagram.utilities.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -177,7 +170,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Explorer explorer = new Explorer();
                 return explorer;
             case 2:
-                return null;
+                PostFragment postFragment = new PostFragment();
+                return postFragment;
             case 3:
                 return null;
             case 4 :

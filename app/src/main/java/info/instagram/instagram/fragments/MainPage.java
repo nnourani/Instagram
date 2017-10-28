@@ -3,7 +3,6 @@ package info.instagram.instagram.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 
 import info.instagram.instagram.R;
 import info.instagram.instagram.adapters.MainAdapter;
-import info.instagram.instagram.entities.Post;
+import info.instagram.instagram.entities.ImagePost;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,7 +78,7 @@ public class MainPage extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        ArrayList<Post> av = prepareDate();
+        ArrayList<ImagePost> av = prepareDate();
 
         MainAdapter mainAdapter = new MainAdapter(getContext(), av);
         mRecyclerView.setAdapter(mainAdapter);
@@ -87,39 +86,39 @@ public class MainPage extends Fragment {
 
     }
 
-    private ArrayList<Post> prepareDate() {
-        ArrayList<Post> av = new ArrayList<>();
-        Post p = new Post(1, 1, "Naser Nourani", R.drawable.a, R.drawable.b1,
-                " Post 1 , Natural 1", 12, 10, false, false, false);
+    private ArrayList<ImagePost> prepareDate() {
+        ArrayList<ImagePost> av = new ArrayList<>();
+        ImagePost p = new ImagePost(1, 1, "Naser Nourani", R.drawable.a, R.drawable.b1,
+                " ImagePost 1 , Natural 1", 12, 10, false, false, false);
 
         av.add(p);
 
-        p = new Post(2, 2, "Saed za", R.drawable.aa, R.drawable.b2,
-                " Post 2 , Natural 2", 130000, 300, true, true, false);
+        p = new ImagePost(2, 2, "Saed za", R.drawable.aa, R.drawable.b2,
+                " ImagePost 2 , Natural 2", 130000, 300, true, true, false);
         av.add(p);
 
-        p = new Post(3, 1, "Naser Nourani", R.drawable.a, R.drawable.b3,
-                " Post 3 , Natural 3", 370, 26, false, true, false);
+        p = new ImagePost(3, 1, "Naser Nourani", R.drawable.a, R.drawable.b3,
+                " ImagePost 3 , Natural 3", 370, 26, false, true, false);
         av.add(p);
 
-        p = new Post(4, 1, "Naser Nourani", R.drawable.a, R.drawable.b4,
-                " Post 4 , Natural 4", 3345, 544, false, false, false);
+        p = new ImagePost(4, 1, "Naser Nourani", R.drawable.a, R.drawable.b4,
+                " ImagePost 4 , Natural 4", 3345, 544, false, false, false);
         av.add(p);
 
-        p = new Post(5, 1, "Naser Nourani", R.drawable.a, R.drawable.b5,
+        p = new ImagePost(5, 1, "Naser Nourani", R.drawable.a, R.drawable.b5,
                 " Post5 , Natural 5", 0, 0, false, false, false);
         av.add(p);
 
-        p = new Post(6, 2, "Saed za", R.drawable.a, R.drawable.b6,
-                " Post 6 , Natural 6", 334223, 5434, false, false, false);
+        p = new ImagePost(6, 2, "Saed za", R.drawable.a, R.drawable.b6,
+                " ImagePost 6 , Natural 6", 334223, 5434, false, false, false);
         av.add(p);
 
-        p = new Post(7, 2, "Saed za", R.drawable.a, R.drawable.b7,
-                " Post 7 , Natural 7", 3, 2, false, false, false);
+        p = new ImagePost(7, 2, "Saed za", R.drawable.a, R.drawable.b7,
+                " ImagePost 7 , Natural 7", 3, 2, false, false, false);
         av.add(p);
 
-        p = new Post(8, 1, "Naser Nourani", R.drawable.a, R.drawable.b1,
-                " Post 8 , Natural 8", 786, 354, true, false, false);
+        p = new ImagePost(8, 1, "Naser Nourani", R.drawable.a, R.drawable.b1,
+                " ImagePost 8 , Natural 8", 786, 354, true, false, false);
         av.add(p);
 
 
